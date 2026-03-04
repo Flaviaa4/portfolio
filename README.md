@@ -84,7 +84,7 @@ portfolio/
 
 - **Header** - Navigation with responsive burger menu and dark mode toggle
 - **Hero** - Introduction section with profile image and key highlights
-- **About** - Detailed background and journey (coming soon)
+- **About** - Detailed background and journey
 - **Skills** - Technical skills showcase (coming soon)
 - **Experience** - Work experience timeline (coming soon)
 - **Contact** - Get in touch form (coming soon)
