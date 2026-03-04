@@ -1,63 +1,169 @@
-<<<<<<< HEAD
-# Resume
+# Flavienne's Portfolio 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+A modern, responsive portfolio website showcasing my work as an aspiring Front-End Developer. Built with Angular 18+ and featuring a clean design with dark mode support.
 
-## Development server
+[Portfolio Preview](/lightmode.png)
+[Dark Mode](/darkmode.png)
 
-To start a local development server, run:
+## Features
+ 
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Dark Mode Toggle** - Switch between light and dark themes with persistent storage
+- **Modern UI** - Clean, professional design with smooth animations
+- **Performance Optimized** - Fast loading with Angular's latest optimizations
+- **Standalone Components** - Built using Angular's modern standalone architecture
 
+## Tech Stack
+
+- **Framework:** Angular 18
+- **Language:** TypeScript
+- **Styling:** Pure CSS (no frameworks)
+- **Architecture:** Standalone Components
+- **Build Tool:** Angular CLI
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18.x or higher)
+- **npm** (v9.x or higher) - comes with Node.js
+- **Angular CLI** (v18.x or higher)
+
+Check your versions:
 ```bash
+node --version
+npm --version
+ng --version
+```
+
+## Installation & Setup
+
+1. **Clone the repository**
+```bash
+   git clone https://github.com/Flaviaa4/portfolio.git
+   cd portfolio
+```
+
+2. **Install dependencies**
+```bash
+   npm install
+```
+
+3. **Run the development server**
+```bash
+   ng serve
+```
+
+4. **Open your browser**
+   
+   Navigate to `http://localhost:4200/`
+   
+   The application will automatically reload if you change any source files.
+
+## Project Structure
+```
+portfolio/
+├── public/                 # Static assets
+│   ├──darkmode.png
+│   └──lightmode.png
+│   └──portfolio-background.png
+│   └──portfolio-background-dark.png
+├── src/
+│   ├── app/
+│   │   ├──about/          # About Me component
+│   │   ├── header/        # Header component with navigation
+│   │   ├── hero/          # Hero/landing section
+│   │   ├── app.html       # Main app template
+│   │   └── app.ts         # Main app component
+│   ├── styles.css         # Global styles
+│   └── main.ts            # Application entry point
+└── README.md
+```
+
+## Sections
+
+- **Header** - Navigation with responsive burger menu and dark mode toggle
+- **Hero** - Introduction section with profile image and key highlights
+- **About** - Detailed background and journey (coming soon)
+- **Skills** - Technical skills showcase (coming soon)
+- **Experience** - Work experience timeline (coming soon)
+- **Contact** - Get in touch form (coming soon)
+
+## Dark Mode
+
+The portfolio includes a fully functional dark mode that:
+- Switches background themes (purple waves → cosmic space)
+- Updates all UI elements and colors
+- Persists user preference in localStorage
+- Provides smooth transitions between modes
+
+## Responsive Design
+
+The portfolio is fully responsive with breakpoints at:
+- **Desktop:** 1200px and above
+- **Tablet:** 768px - 1199px
+- **Mobile:** Below 768px
+
+Mobile features include:
+- Burger menu navigation
+- Optimized layouts
+- Touch-friendly interactions
+
+## Available Scripts
+```bash
+# Development server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Build for production
 ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
+# Run unit tests
 ng test
+
+# Run linting
+ng lint
+
+# Clear Angular cache
+ng cache clean
 ```
 
-## Running end-to-end tests
+## 📸 Screenshots
 
-For end-to-end (e2e) testing, run:
+### Light Mode
+![Light Mode Homepage](/lightmode.png)
 
+### Dark Mode
+![Dark Mode Homepage](/darkmode.png)
+
+### Mobile View
+![Mobile Responsive](./screenshots/mobile-view.png)
+
+## Deployment
+
+To build the project for production:
 ```bash
-ng e2e
+ng build --configuration production
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The build artifacts will be stored in the `dist/` directory.
 
-## Additional Resources
+## Contributing
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# portfolio
->>>>>>> 2a24abd12085e99fe658bcee0125cb115f78304d
+This is a personal portfolio project, but suggestions and feedback are welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Author
+
+**Flavienne**
+
+- GitHub: [@Flaviaa4](https://github.com/Flaviaa4)
+
+## Acknowledgments
+
+- Background images: Custom design
+- Icons: SVG custom icons
