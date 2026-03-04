@@ -1,0 +1,103 @@
+/* Section Wrapper */
+.about-section {
+  padding:  20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Container */
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.about-content {
+  text-align: center;
+}
+
+/* Title */
+.section-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.about-description {
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* Timeline Grid */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.timeline-item {
+  padding: 25px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.year {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.timeline-item h4 {
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+.timeline-item p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* CV Button */
+.cv-button-wrapper {
+  margin-top: 20px;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: black;
+  color:#fff;
+  transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #c97142;
+  color: #fff;
+}
+
+:host-context(.dark-mode) .timeline-item {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:host-context(.dark-mode) .cv-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+:host-context(.dark-mode) .cv-button:hover {
+  background-color: #c97142;
+  color: white;
+}
