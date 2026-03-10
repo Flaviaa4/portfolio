@@ -24,12 +24,14 @@ body.dark-mode .header {
 }
 
 .logo a {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #000000;
+  font-family: 'Geist Mono', monospace;
   text-decoration: none;
   transition: color 0.3s ease;
   letter-spacing: -0.5px;
+
 }
 
 body.dark-mode .logo a {
@@ -53,8 +55,9 @@ body.dark-mode .logo a:hover {
 .nav-link {
   color: #000000;
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-family: 'Geist Mono', monospace;
+  font-weight: 3rem;
   transition: color 0.3s ease;
 }
 

@@ -1,0 +1,117 @@
+<section class="skills-experience" id="skills">
+  <div class="container">
+    <div class="skills-section">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-carousel">
+        <div class="skills-track" [style.transform]="'translateX(' + (-currentSkillIndex * 100) + '%)'">
+          <div class="skills-slide">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+              <span>JS</span>
+            </div>
+          </div>
+
+          <div class="skills-slide">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular">
+              <span>Angular</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+              <span>Next.js</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+              <span>TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          *ngIf="currentSkillIndex > 0"
+          class="carousel-arrow left"
+          (click)="prevSkill()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <button
+          *ngIf="currentSkillIndex < maxSkillIndex"
+          class="carousel-arrow right"
+          (click)="nextSkill()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <button class="view-projects-btn">View Projects</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="experience-section" id="experience">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-content">
+        <div class="experience-slide" *ngIf="currentExperienceIndex === 0">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-role">IT Support Assistant</h3>
+            </div>
+            <ul class="experience-list">
+              <li>Assisted in IT infrastructure setup</li>
+              <li>Learned networking fundamentals</li>
+              <li>Worked in team environment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-slide" *ngIf="currentExperienceIndex === 1">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-role">Frontend Developer Intern</h3>
+            </div>
+            <ul class="experience-list">
+              <li>Built responsive web applications</li>
+              <li>Collaborated with design team</li>
+              <li>Implemented modern UI components</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-slide" *ngIf="currentExperienceIndex === 2">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-role">Web Development Student</h3>
+            </div>
+            <ul class="experience-list">
+              <li>Developed full-stack solutions</li>
+              <li>Optimized application performance</li>
+              <li>Mentored junior developers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-dots">
+        <button
+          *ngFor="let dot of experienceDots; let i = index"
+          class="dot"
+          [class.active]="i === currentExperienceIndex"
+          (click)="goToExperience(i)">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
