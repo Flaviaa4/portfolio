@@ -1,4 +1,5 @@
 .contact-section {
+  font-family: 'Playfair', 'Display';
   min-height: 100vh;
   padding: 4rem 2rem;
   display: flex;
@@ -90,7 +91,6 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #c97142;
   box-shadow: 0 0 0 3px rgba(201, 113, 66, 0.1);
 }
 
@@ -234,4 +234,37 @@ textarea.form-input {
   .contact-form {
     padding: 2rem;
   }
+
+}
+.input-error {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.input-success {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.error-message,
+.success-message {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.text-error {
+  color: #ef4444;
+}
+
+.text-success {
+  color: #10b981;
+}
+
+:host-context(.dark-mode) .text-error {
+  color: #f87171;
+}
+
+:host-context(.dark-mode) .text-success {
+  color: #34d399;
 }

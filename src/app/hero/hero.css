@@ -16,11 +16,12 @@
 }
 
 .hero-content {
-  padding:1px;
+  padding:2px;
 }
 
 .hero-title {
-  font-size: 2.rem;
+  font-family: 'Playfair Display';
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #000000;
@@ -75,12 +76,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 0.5rem;
   padding-right: 0;
 }
 
 .hero-image img {
   width: 240px;
   height: 240px;
+  margin-bottom: 0.5rem;
   border-radius: 50%;
   object-fit: cover;
   border: 8px solid #ffffff;
@@ -170,3 +173,132 @@
   color: #ffffff;
 }
 
+
+@media (max-width: 968px) {
+  .hero {
+    padding: 0 1.5rem;
+  }
+
+  .hero-container {
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .hero-list li {
+    font-size: 1.25rem;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-image {
+    order: 1;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .hero-list li {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions {
+    margin-top: 2rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .floating-element {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .hero-container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-list li {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+}
