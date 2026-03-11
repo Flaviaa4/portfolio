@@ -7,11 +7,12 @@ A modern, responsive portfolio website showcasing my work as an aspiring Front-E
 
 ## Features
  
-- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
 - **Dark Mode Toggle** - Switch between light and dark themes with persistent storage
 - **Modern UI** - Clean, professional design with smooth animations
 - **Performance Optimized** - Fast loading with Angular's latest optimizations
 - **Standalone Components** - Built using Angular's modern standalone architecture
+- **Tests** - Unit testing implementation across all components with form validation
+- **Responsive Design** - Not yet implemented by now
 
 ## Tech Stack
 
