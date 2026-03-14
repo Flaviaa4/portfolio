@@ -33,7 +33,7 @@ body.dark-mode .header {
   letter-spacing: 0px;
 }
 
-body.dark-mode .logo a {
+:host-context(.dark-mode) .logo a {
   color: #ffffff;
 }
 
@@ -133,9 +133,11 @@ body.dark-mode .burger-menu span {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ========================================
-   RESPONSIVE - ALL DEVICES
-   ======================================== */
+@media (max-width: 1199px) {
+  .container {
+    padding: 0.75rem 1.75rem;
+  }
+}
 
 /* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
@@ -216,6 +218,10 @@ body.dark-mode .burger-menu span {
 
 /* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
+  .container {
+    padding: 0.65rem 0.75rem;
+  }
+
   .logo a {
     font-size: 1.1rem;
   }
@@ -227,5 +233,16 @@ body.dark-mode .burger-menu span {
 
   .burger-menu span {
     width: 20px;
+  }
+}
+
+/* Very small mobile (max-width: 375px) */
+@media (max-width: 375px) {
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .theme-toggle {
+    padding: 0.4rem;
   }
 }

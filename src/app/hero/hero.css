@@ -135,7 +135,7 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  padding-left: 31.5rem;
+  padding-left: 27rem;
   padding-top: 2rem;
 }
 
@@ -174,6 +174,17 @@
 }
 
 
+@media (max-width: 1199px) {
+  .hero {
+    padding: 0 2rem;
+  }
+
+  .hero-container {
+    gap: 2.5rem;
+  }
+}
+
+/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
   .hero {
     padding: 0 1.5rem;
@@ -200,13 +211,20 @@
     width: 220px;
     height: 220px;
   }
-}
-@media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-    min-height: auto;
-  }
 
+  .social-links {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -248,12 +266,11 @@
     font-size: 1.1rem;
   }
 
-  .hero-actions {
-    margin-top: 2rem;
-  }
-
   .social-links {
     justify-content: center;
+    padding-left: 0;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
   }
 
   .social-link {
@@ -266,11 +283,7 @@
     height: 20px;
   }
 
-  .floating-element {
-    display: none;
-  }
-}
-
+/* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .hero {
     padding: 1.5rem 0.75rem;
@@ -278,6 +291,7 @@
 
   .hero-container {
     padding: 0 0.5rem;
+    gap: 1.5rem;
   }
 
   .hero-title {
@@ -297,8 +311,52 @@
     height: 160px;
   }
 
+  .social-links {
+    gap: 1rem;
+    padding-top: 1.25rem;
+  }
+
   .social-link {
     width: 40px;
     height: 40px;
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Very small mobile (max-width: 375px) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 1rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-list li {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    width: 140px;
+    height: 140px;
+    border: 6px solid #ffffff;
+  }
+
+  :host-context(.dark-mode) .hero-image img {
+    border: 6px solid #2a2a2a;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
   }
 }

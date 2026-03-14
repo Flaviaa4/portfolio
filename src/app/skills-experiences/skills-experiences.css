@@ -20,7 +20,7 @@
 .section-title {
   font-size: 30px;
   font-weight: 700;
-  text-align: center;
+  padding-left: 6rem;
   margin-bottom: 1rem;
   color: #000000;
 }
@@ -43,7 +43,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  padding: 18px;
+  padding-top: 4rem;
 }
 
 .skills-carousel {
@@ -145,6 +146,7 @@
   background: #000000;
   color: #ffffff;
   border: none;
+  padding-bottom: 4rem;
   padding: 1rem 1rem;
   border-radius: 8px;
   font-size: 14px;
@@ -169,12 +171,12 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
   border-radius: 14px;
-  padding: 15px;
+  padding: 18px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  margin: 0;
-  max-width: 500px;
+  margin: 25px;
+  max-width: 400px;
 }
 
 :host-context(.dark-mode) .experience-card {
@@ -195,6 +197,7 @@
 .experience-header {
   margin: 20px 0;
   font-size: 17px;
+  padding: 0 2rem 0 0;
 }
 
 
@@ -269,9 +272,15 @@
 :host-context(.dark-mode) .dot:hover {
   background: #c97142 !important;
 }
-/* ========================================
-   RESPONSIVE - ALL DEVICES
-   ======================================== */
+@media (max-width: 1199px) {
+  .skills-experience {
+    padding: 3rem 2rem;
+  }
+
+  .section-title {
+    padding-left: 4rem;
+  }
+}
 
 /* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
@@ -292,6 +301,12 @@
 
   .section-title {
     font-size: 26px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .skills-section {
+    padding-top: 2rem;
   }
 }
 
@@ -303,24 +318,47 @@
 
   .container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+    margin-top: 1rem;
   }
 
   .section-title {
     font-size: 24px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .skills-section {
+    padding: 10px;
+    padding-top: 1.5rem;
   }
 
   .skills-slide {
     gap: 1rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .skill-item img {
     width: 70px;
     height: 70px;
+    padding: 0.5rem;
   }
 
   .skill-item span {
     font-size: 0.875rem;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-arrow.left {
+    left: -15px;
+  }
+
+  .carousel-arrow.right {
+    right: -15px;
   }
 
   .view-projects-btn {
@@ -328,17 +366,16 @@
     font-size: 0.875rem;
   }
 
-  .experience-content {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
   .experience-card {
     width: 100%;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 16px;
   }
 
-  .experience-role {
-    font-size: 0.95rem;
+  .experience-header {
+    font-size: 16px;
+    padding: 0 1rem 0 0;
   }
 
   .experience-list li {
@@ -356,9 +393,23 @@
     font-size: 22px;
   }
 
+  .skills-carousel {
+    max-width: 100%;
+  }
+
+  .skills-slide {
+    gap: 0.75rem;
+    padding: 1rem 0.25rem;
+  }
+
   .skill-item img {
     width: 60px;
     height: 60px;
+    padding: 0.4rem;
+  }
+
+  .skill-item span {
+    font-size: 0.8rem;
   }
 
   .carousel-arrow {
@@ -366,8 +417,73 @@
     height: 38px;
   }
 
+  .carousel-arrow.left {
+    left: -10px;
+  }
+
+  .carousel-arrow.right {
+    right: -10px;
+  }
+
   .view-projects-btn {
     padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
+  }
+
+  .experience-card {
+    padding: 14px;
+    margin: 10px auto;
+  }
+
+  .experience-header {
+    font-size: 15px;
+  }
+
+  .experience-list li {
+    font-size: 12px;
+  }
+
+  .pagination-dots {
+    gap: 0.75rem !important;
+  }
+
+  .dot {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-experience {
+    padding: 2rem 0.5rem;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .skills-slide {
+    gap: 0.5rem;
+  }
+
+  .skill-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-item span {
+    font-size: 0.75rem;
+  }
+
+  .experience-card {
+    padding: 12px;
+  }
+
+  .experience-header {
+    font-size: 14px;
+  }
+
+  .experience-list li {
+    font-size: 11px;
   }
 }

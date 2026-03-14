@@ -85,12 +85,41 @@ body.dark-mode .burger-menu span {
   background-color: #ffffff;
 }
 
-/* ========================================
-   RESPONSIVE BREAKPOINTS
-   ======================================== */
+@media only screen and (max-width: 1199px) {
+  main {
+    padding-top: 65px;
+  }
 
-/* Small devices (max-width: 600px) */
-@media only screen and (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  body.dark-mode {
+    background-attachment: scroll;
+  }
+}
+
+/* Tablet (max-width: 968px) */
+@media only screen and (max-width: 968px) {
+  main {
+    padding-top: 60px;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  body.dark-mode {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media only screen and (max-width: 768px) {
   .nav {
     display: none;
   }
@@ -100,17 +129,50 @@ body.dark-mode .burger-menu span {
   }
 
   .burger-menu {
-    display: block;
+    display: flex;
   }
 
-  .logo a {
-    font-size: 1.1rem;
+  main {
+    padding-top: 60px;
+  }
+
+  section,
+  .hero,
+  .about-section,
+  .skills-experience,
+  .contact-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h2,
+  .section-title {
+    text-align: center;
   }
 
   body {
-    margin-top: 0;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
   }
 
+  body.dark-mode {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  body.dark-mode .nav {
+    background-color: #1a1a1a;
+  }
+
+  body.dark-mode .nav-link {
+    border-bottom: 1px solid #333333;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media only screen and (max-width: 480px) {
   main {
     padding-top: 55px;
   }
@@ -120,119 +182,60 @@ body.dark-mode .burger-menu span {
   .about-section,
   .skills-experience,
   .contact-section {
-    padding: 1rem 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   h2,
   .section-title {
-    text-align: center;
     font-size: 22px;
   }
 
-  * {
-    font-size: medium;
+  body {
+    background-size: auto 100%;
+    background-position: center;
   }
 
-  .hero {
-    margin-bottom: 1rem;
+  body.dark-mode {
+    background-size: auto 100%;
+    background-position: center;
   }
 
-  .contact-info {
-    text-align: center;
-  }
-
-  .contact-content {
-    padding-top: 2rem;
-  }
-
-  body.dark-mode .nav {
-    background-color: #1a1a1a;
-  }
-
-  body.dark-mode .nav-link {
-    border-bottom: 1px solid #333333;
+  .footer {
+    padding: 1.5rem 0.75rem;
   }
 }
 
-/* Small to Medium devices (600px to 767px) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-  .nav {
-    display: none;
+/* Very small mobile (max-width: 375px) */
+@media only screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
   }
 
-  .nav.active {
-    display: flex;
+  main {
+    padding-top: 50px;
   }
 
-  .burger-menu {
-    display: block;
-  }
-
-  .logo a {
-    font-size: 1.25rem;
+  section,
+  .hero,
+  .about-section,
+  .skills-experience,
+  .contact-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   h2,
   .section-title {
-    text-align: center;
-    font-size: 24px;
+    font-size: 20px;
   }
 
-  .hero {
-    margin-bottom: 1rem;
+  .footer {
+    padding: 1.25rem 0.5rem;
   }
 
-  .contact-info {
-    text-align: center;
-  }
-
-  .contact-content {
-    padding-top: 2rem;
-  }
-
-  section,
-  .about-section,
-  .skills-experience,
-  .contact-section {
-    padding: 1.5rem 1rem;
-  }
-
-  body.dark-mode .nav {
-    background-color: #1a1a1a;
-  }
-
-  body.dark-mode .nav-link {
-    border-bottom: 1px solid #333333;
-  }
-}
-
-/* Medium devices (768px and up) */
-@media only screen and (min-width: 768px) {
-  .nav {
-    display: flex;
-  }
-
-  .burger-menu {
-    display: none;
-  }
-
-  main {
-    padding-top: 65px;
-  }
-}
-
-/* Large devices (992px and up) */
-@media only screen and (min-width: 992px) {
-  * {
-    font-size: large;
-  }
-
-  .logo a {
-    font-size: 1.5rem;
-  }
-
-  .section-title {
-    font-size: 30px;
+  .footer p {
+    font-size: 0.8rem;
   }
 }
 
@@ -245,15 +248,4 @@ body.dark-mode .burger-menu span {
   .contact-section .container {
     max-width: 1200px;
   }
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
