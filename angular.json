@@ -28,6 +28,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
+                "output": "/"
               }
             ],
             "styles": [
