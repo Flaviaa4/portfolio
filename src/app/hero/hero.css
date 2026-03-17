@@ -16,7 +16,7 @@
 }
 
 .hero-content {
-  padding:2px;
+  padding: 2px;
 }
 
 .hero-title {
@@ -94,6 +94,7 @@
   border-color: #2a2a2a;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
+
 .hero-buttons {
   display: flex;
   gap: 1rem;

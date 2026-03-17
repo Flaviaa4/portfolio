@@ -117,7 +117,7 @@ body.dark-mode .theme-toggle:hover {
   border-radius: 2px;
 }
 
-body.dark-mode .burger-menu span {
+:host-context(.dark-mode) .burger-menu span {
   background-color: #ffffff;
 }
 
