@@ -281,8 +281,6 @@
     padding-left: 4rem;
   }
 }
-
-/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
   .skills-experience {
     padding: 3rem 1.5rem;
@@ -309,8 +307,6 @@
     padding-top: 2rem;
   }
 }
-
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .skills-experience {
     padding: 3rem 1rem;
@@ -382,8 +378,6 @@
     font-size: 13px;
   }
 }
-
-/* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .skills-experience {
     padding: 2.5rem 0.75rem;

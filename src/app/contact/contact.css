@@ -1,7 +1,5 @@
 .contact-section {
-  /* font-family: 'Playfair', 'Display'; */
   min-height: 80vh;
-  /* padding: 3rem; */
   display: flex;
   align-items: center;
   scroll-margin-top: 60px;
@@ -190,7 +188,6 @@ textarea.form-input {
 
 .footer {
   text-align: center;
-  /* padding-top: 0.5rem; */
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -212,8 +209,6 @@ textarea.form-input {
     gap: 3rem;
   }
 }
-
-/* Tablet (max-width: 968px) */
 @media (max-width: 968px) {
   .contact-section {
     padding: 3rem 1.5rem;
@@ -232,8 +227,6 @@ textarea.form-input {
     font-size: 26px;
   }
 }
-
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .contact-section {
     padding: 3rem 1rem;
@@ -280,8 +273,6 @@ textarea.form-input {
     font-size: 0.95rem;
   }
 }
-
-/* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .contact-section {
     padding: 2.5rem 0.75rem;
@@ -318,8 +309,6 @@ textarea.form-input {
     font-size: 0.85rem;
   }
 }
-
-/* Very small mobile (max-width: 375px) */
 @media (max-width: 375px) {
   .contact-section {
     padding: 2rem 0.5rem;

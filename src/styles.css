@@ -33,12 +33,10 @@ app-root {
 }
 
 main {
-  padding-top: 65px;
   min-height: 100vh;
   background: transparent;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -50,8 +48,6 @@ main {
     transform: scale(1);
   }
 }
-
-/* Dark mode styles */
 body.dark-mode .header {
   background-color: #1a1a1a;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
@@ -98,8 +94,6 @@ body.dark-mode .burger-menu span {
     background-attachment: scroll;
   }
 }
-
-/* Tablet (max-width: 968px) */
 @media only screen and (max-width: 968px) {
   main {
     padding-top: 60px;
@@ -118,7 +112,6 @@ body.dark-mode .burger-menu span {
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   .nav {
     display: none;
@@ -170,8 +163,6 @@ body.dark-mode .burger-menu span {
     border-bottom: 1px solid #333333;
   }
 }
-
-/* Small mobile (max-width: 480px) */
 @media only screen and (max-width: 480px) {
   main {
     padding-top: 55px;
@@ -205,8 +196,6 @@ body.dark-mode .burger-menu span {
     padding: 1.5rem 0.75rem;
   }
 }
-
-/* Very small mobile (max-width: 375px) */
 @media only screen and (max-width: 375px) {
   body {
     font-size: 14px;
@@ -238,8 +227,6 @@ body.dark-mode .burger-menu span {
     font-size: 0.8rem;
   }
 }
-
-/* Extra large devices (1200px and up) */
 @media only screen and (min-width: 1200px) {
 
   .hero-container,
