@@ -9,12 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills-experiences.css',
 })
 export class SkillsExperiences {
-
   currentSkillIndex = 0;
   maxSkillIndex = 1;
 
   currentExperienceIndex = 0;
-  experienceDots = [0, 1, 2]; 
+  experienceDots = [0, 1, 2];
 
   nextSkill() {
     if (this.currentSkillIndex < this.maxSkillIndex) {
