@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-about',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './about.html',
-  styleUrls: ['./about.css'],
+  styleUrl: './about.css'
 })
-export class About {}
+export class AboutComponent {
+  @Output() viewProjectsClicked = new EventEmitter<void>();
+
+  onViewProjects() {
+    this.viewProjectsClicked.emit();
+  }
+}

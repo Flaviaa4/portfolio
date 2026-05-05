@@ -16,9 +16,12 @@
     "axe/name-role-value": [
       "default",
       {
-        "button-name": "off"
+        "button-name": "off",
+        "link-name": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "typescript-config/is-valid": "off",
+    "button-type": "off"
   }
 }

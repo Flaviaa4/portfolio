@@ -1,33 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills-experiences',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './skills-experiences.html',
   styleUrl: './skills-experiences.css',
 })
 export class SkillsExperiences {
-  currentSkillIndex = 0;
-  maxSkillIndex = 1;
+  @Output() viewProjectsClicked = new EventEmitter<void>();
 
-  currentExperienceIndex = 0;
+  currentSlide: number = 0;
+  experienceSlide: number = 0;
   experienceDots = [0, 1, 2];
 
-  nextSkill() {
-    if (this.currentSkillIndex < this.maxSkillIndex) {
-      this.currentSkillIndex++;
+  prevSlide() {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
     }
   }
 
-  prevSkill() {
-    if (this.currentSkillIndex > 0) {
-      this.currentSkillIndex--;
+  nextSlide() {
+    if (this.currentSlide < 1) {
+      this.currentSlide++;
     }
   }
 
   goToExperience(index: number) {
-    this.currentExperienceIndex = index;
+    this.experienceSlide = index;
+  }
+
+  onViewProjects() {
+    this.viewProjectsClicked.emit();
   }
 }

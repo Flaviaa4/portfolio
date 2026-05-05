@@ -4,7 +4,7 @@
       <h2 class="section-title">Skills</h2>
 
       <div class="skills-carousel">
-        <div class="skills-track" [style.transform]="'translateX(' + (-currentSkillIndex * 100) + '%)'">
+        <div class="skills-track" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
           <div class="skills-slide">
             <div class="skill-item">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
@@ -37,25 +37,25 @@
         </div>
 
         <button
-          *ngIf="currentSkillIndex > 0"
+          *ngIf="currentSlide > 0"
           class="carousel-arrow left"
-          (click)="prevSkill()">
+          (click)="prevSlide()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
 
         <button
-          *ngIf="currentSkillIndex < maxSkillIndex"
+          *ngIf="currentSlide < 1"
           class="carousel-arrow right"
-          (click)="nextSkill()">
+          (click)="nextSlide()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
       </div>
 
-      <button class="view-projects-btn">View Projects</button>
+      <button (click)="onViewProjects()" class="view-projects-btn">View My Projects</button>
     </div>
 
     <div class="divider"></div>
@@ -64,41 +64,47 @@
       <h2 class="section-title">Experience</h2>
 
       <div class="experience-content">
-        <div class="experience-slide" *ngIf="currentExperienceIndex === 0">
+        <div class="experience-slide" *ngIf="experienceSlide === 0">
           <div class="experience-card">
             <div class="experience-header">
-              <h3 class="experience-role">IT Support Assistant</h3>
+              <h3 class="experience-role">Teaching Assistant</h3>
+              <span class="experience-duration">2024 - Present</span>
             </div>
+            <p class="experience-company">Carnegie Mellon University</p>
             <ul class="experience-list">
-              <li>Assisted in IT infrastructure setup</li>
-              <li>Learned networking fundamentals</li>
-              <li>Worked in team environment</li>
+              <li>Assist students with cloud computing coursework and projects</li>
+              <li>Grade assignments and provide detailed feedback</li>
+              <li>Hold office hours to support student learning</li>
             </ul>
           </div>
         </div>
 
-        <div class="experience-slide" *ngIf="currentExperienceIndex === 1">
+        <div class="experience-slide" *ngIf="experienceSlide === 1">
           <div class="experience-card">
             <div class="experience-header">
-              <h3 class="experience-role">Frontend Developer Intern</h3>
+              <h3 class="experience-role">Software Developer</h3>
+              <span class="experience-duration">2023 - 2024</span>
             </div>
+            <p class="experience-company">Freelance Projects</p>
             <ul class="experience-list">
-              <li>Built responsive web applications</li>
-              <li>Collaborated with design team</li>
-              <li>Implemented modern UI components</li>
+              <li>Developed full-stack web applications using Angular and Flask</li>
+              <li>Created responsive UI designs and user-friendly interfaces</li>
+              <li>Implemented RESTful APIs and database solutions</li>
             </ul>
           </div>
         </div>
 
-        <div class="experience-slide" *ngIf="currentExperienceIndex === 2">
+        <div class="experience-slide" *ngIf="experienceSlide === 2">
           <div class="experience-card">
             <div class="experience-header">
-              <h3 class="experience-role">Web Development Student</h3>
+              <h3 class="experience-role">Project Developer</h3>
+              <span class="experience-duration">2023</span>
             </div>
+            <p class="experience-company">Academic Projects</p>
             <ul class="experience-list">
-              <li>Developed full-stack solutions</li>
-              <li>Optimized application performance</li>
-              <li>Mentored junior developers</li>
+              <li>Built climate action platform with real-time weather data</li>
+              <li>Developed IT helpdesk ticketing system with role-based access</li>
+              <li>Created government admin authentication interface</li>
             </ul>
           </div>
         </div>
@@ -108,7 +114,7 @@
         <button
           *ngFor="let dot of experienceDots; let i = index"
           class="dot"
-          [class.active]="i === currentExperienceIndex"
+          [class.active]="i === experienceSlide"
           (click)="goToExperience(i)">
         </button>
       </div>

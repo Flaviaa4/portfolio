@@ -1,9 +1,8 @@
-<app-header></app-header>
-<main>
-  <div style="padding: 1rem; text-align: center;">
-  </div>
+<div class="app-container">
+  <app-header></app-header>
   <app-hero></app-hero>
-<app-about></app-about>
-<app-skills-experiences></app-skills-experiences>
-<app-contact></app-contact>
-</main>
+  <app-about></app-about>
+  <app-skills-experiences (viewProjectsClicked)="toggleProjects()"></app-skills-experiences>
+  <app-projects *ngIf="showProjects"></app-projects>
+  <app-contact></app-contact>
+</div>
