@@ -186,6 +186,20 @@ textarea.form-input {
   color: #ffffff;
 }
 
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.success-message {
+  color: #00b100;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
 .footer {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.1);

@@ -40,15 +40,13 @@
               [class.input-error]="isFieldInvalid('name')"
               [class.input-success]="isFieldValid('name')">
             <span
-              *ngIf="isFieldInvalid('name')"
-              class="error-message text-error" fill="#ec1b1b">
-              {{ getErrorMessage('name') }}
+              *ngIf="isFieldInvalid('name')" class="error-message">
+                 {{ getErrorMessage('name') }}
             </span>
             <span
-              *ngIf="isFieldValid('name')"
-              class="success-message text-success" fill="#14c92c">
-              Name is valid
-            </span>
+              *ngIf="isFieldValid('name')" class="success-message">
+            Name is valid
+           </span>
           </div>
 
           <div class="form-group">
