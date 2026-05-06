@@ -187,17 +187,24 @@ textarea.form-input {
 }
 
 .error-message {
-  color: #ff0000;
+  color: #ff0000 !important;
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: block;
 }
 
+:host-context(.dark-mode) .error-message {
+  color: #ff4444 !important;
+}
 .success-message {
-  color: #00b100;
+  color: #00b100 !important;
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: block;
+}
+
+:host-context(.dark-mode) .success-message {
+  color: #00ff00 !important;
 }
 
 .footer {
